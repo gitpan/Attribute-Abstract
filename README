@@ -1,0 +1,36 @@
+NAME
+    Attribute::Abstract - implementing abstract methods with attributes
+
+SYNOPSIS
+      package SomeObj;
+      use Attribute::Abstract;
+
+      sub new { ... }
+      sub write : Abstract;
+
+DESCRIPTION
+    Declaring a subroutine to be abstract using this attribute causes a call
+    to it to die with a suitable exception. Subclasses are expected to
+    implement the abstract method.
+
+    Using the attribute makes it visually distinctive that a method is
+    abstract, as opposed to declaring it without any attribute or method
+    body, or providing a method body that might make it look as though it
+    was implemented after all.
+
+BUGS
+    None known so far. If you find any bugs or oddities, please do inform
+    the author.
+
+AUTHOR
+    Marcel Grünauer, <marcel@codewerk.com>
+
+COPYRIGHT
+    Copyright 2001 Marcel Grünauer. All rights reserved.
+
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
+SEE ALSO
+    perl(1).
+
